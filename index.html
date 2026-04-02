@@ -46,7 +46,8 @@
         nav {
             background-color: #333;
             display: flex;
-            justify-content: center;
+            justify-content: left;
+            padding-left: 1%;
             padding: 0.5rem;
             flex-wrap: wrap;
         }
@@ -131,6 +132,12 @@ footer p {
                 margin: 0.5rem 0;
             }
         }
+.revenge_of_draconis {
+    width: 20%;
+    height: auto;
+    float: right;
+}
+
     </style>
 </head>
 <body>
@@ -141,23 +148,23 @@ footer p {
 
     <!-- Navigation -->
     <nav>
-        <a href="#Accueil" onclick="showSection('accueil')">Home</a>
-        <a href="#Fan Fiction" onclick="showSection('FanFiction')">Récompense</a>
+        <a href="#Accueil" onclick="showSection('accueil')">Accueil</a>
+        <a href="#FanFiction" onclick="showSection('FanFiction')">Fan Fiction</a>
     </nav>
 
     <!-- Main Sections -->
     <main>
         <section id="accueil" class="content active">
-            <h2>Joyeux Anniversaire du site BPAN</h2>
-            <img src="https://woodfam.duckdns.org/s/F7sazj8a7qktJLz/download" alt="Logo">
+            <h2 text-align="center">Fan Fiction</h2>
         </section>
 
         <section id="FanFiction" class="content">
-            <h2>Récompense</h2>
-            <p>Pour célébrer les 20 ans du site BPAN, nous avons décidé de récompenser nos fidèles visiteurs avec une surprise spéciale.<br><br>
-                <a href="#" onclick="showSection('alerte')">https://pasquier.fr/bpan/je_recupere_ma_recompense/</a>
+            <h2>Voici toutes les fan fictions que nous pouvons vous proposez</h2>
+            <p>Pour choisir l'histoire que vous souhaitez découvrir, veuillez simplement cliqué sur la couverture de cette dernière.<br><br>
+                <a href="#" onclick="showSection('alerte')">
+                    <img class="revenge_of_draconis" src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/revenge_of_draconis.png" alt="Logo">
+                </a>
             </p>
-            <img src="https://woodfam.duckdns.org/s/G5gWw42mNFpESBH/download" alt="Logo">
         </section>
 
         <section id="alerte" class="content">
