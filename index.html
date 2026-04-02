@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan Fiction</title>
+    <link rel="icon" type="image/x-icon" href="icone.ico">
+
+    <style>
+        /* ===== Reset ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+        }
+
+        /* ===== Header ===== */
+        header {
+            background-image: url('https://1drv.ms/i/c/0720a374b656057c/IQACZwF42K4pQaEH7AbWkePBAc1cK63pl7g-nXuvZbGSiJs?e=SfIrdF');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            aspect-ratio: 16 / 9;
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        /* ===== Navigation ===== */
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0.5rem 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        /* ===== Main sections ===== */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .content.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .content img {
+            width: 100%;      /* s’adapte à la largeur */
+            height: auto;     /* garde les proportions */
+            max-width: 100%;
+            display: block;
+            margin: 1rem auto;
+        }
+
+        /* ===== Footer ===== */
+footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;  /* image au-dessus, texte en dessous */
+    justify-content: center;
+    align-items: center;
+    width: 100%;            /* prend toute la largeur de l'écran */
+    padding: 1rem 0;
+}
+
+footer img {
+    width: 100%;      /* prend toute la largeur du footer */
+    height: auto;     /* garde les proportions */
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+        /* ===== Responsive text ===== */
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#Accueil" onclick="showSection('accueil')">Home</a>
+        <a href="#Fan Fiction" onclick="showSection('FanFiction')">Récompense</a>
+    </nav>
+
+    <!-- Main Sections -->
+    <main>
+        <section id="accueil" class="content active">
+            <h2>Joyeux Anniversaire du site BPAN</h2>
+            <img src="https://woodfam.duckdns.org/s/F7sazj8a7qktJLz/download" alt="Logo">
+        </section>
+
+        <section id="FanFiction" class="content">
+            <h2>Récompense</h2>
+            <p>Pour célébrer les 20 ans du site BPAN, nous avons décidé de récompenser nos fidèles visiteurs avec une surprise spéciale.<br><br>
+                <a href="#" onclick="showSection('alerte')">https://pasquier.fr/bpan/je_recupere_ma_recompense/</a>
+            </p>
+            <img src="https://woodfam.duckdns.org/s/G5gWw42mNFpESBH/download" alt="Logo">
+        </section>
+
+        <section id="alerte" class="content">
+            <h2>Attention ! <br> Vous avez cliqué sur un lien frauduleux !</h2>
+            <img src="https://woodfam.duckdns.org/s/oa3cYc8F9aKoTQH/download" alt="Logo">
+            <p>Pour récupérer votre récompense, veuillez suivre les étapes suivantes :</p>
+            <ol>
+                <li>Vous vous êtes fait piéger par un lien frauduleux.</li>
+                <li>Merci de ne pas prévenir vos collègues.</li>
+                <li>
+                    <h1>⚠️⚠️Pas de panique, c'est une blague ! Vos données ne sont pas compromises</h1>
+                </li>
+            </ol>
+            <img src="https://woodfam.duckdns.org/s/oa3cYc8F9aKoTQH/download" alt="Logo">
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <img src="https://woodfam.duckdns.org/s/ApzKTiA3k8GaxWF/download" alt="Footer Image">
+            <p>&copy; 2026 BPAN Birthday. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS pour changer les sections -->
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll(".content").forEach(section => {
+                section.classList.remove("active");
+            });
+            document.getElementById(sectionId).classList.add("active");
+        }
+    </script>
+</body>
+</html>
