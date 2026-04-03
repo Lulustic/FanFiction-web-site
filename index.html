@@ -60,15 +60,15 @@
         }
 
         nav a:hover {
-            color: #4CAF50;
+            color: red;
         }
 
         /* ===== Main sections ===== */
+        
         main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 0 5%;
         }
+
 
         .content {
             display: none;
@@ -166,6 +166,25 @@ footer p {
         <section id="alerte" class="content">
             <h2>Merci d'avoir choisis Revenge of Draconis</h2>
             <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/revenge_of_draconis.png" alt="Footer Image">
+            <div id="resume">
+                <p>
+                    résumé à rédiger
+                </p>
+            </div>
+            <div id="chapitres">
+                <div class="mot_de_l_auteur">
+                    <a href="#Mot de l'auteur" onclick="showSection('mot_de_l_auteur')">mot de l'auteur</a>
+                </div>
+                    
+                <div id ="chapitre1">
+                    <a href="#chapitre1" onclick="showSection('chapitre1')">Chapitre 1</a>
+                </div>   
+
+                <div id ="chapitre2">
+                    <a href="#chapitre2" onclick="showSection('chapitre2')">Chapitre 2</a>
+                </div>
+            </div>
+
         </section>
     </main>
 
@@ -173,7 +192,7 @@ footer p {
     <footer>
         <div class="footer-content">
             <img src="https://woodfam.duckdns.org/s/ApzKTiA3k8GaxWF/download" alt="Footer Image">
-            <p>&copy; 2026 BPAN Birthday. All rights reserved.</p>
+            <p>&copy; 2026 lulustic. All rights reserved.</p>
         </div>
     </footer>
 
