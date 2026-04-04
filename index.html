@@ -64,11 +64,9 @@
         }
 
         /* ===== Main sections ===== */
-        
         main {
-            padding: 0 5%;
+            padding: 0 15%;
         }
-
 
         .content {
             display: none;
@@ -82,36 +80,35 @@
         }
 
         .content img {
-            width: 100%;      /* s’adapte à la largeur */
-            height: auto;     /* garde les proportions */
+            width: 100%;
+            height: auto;
             max-width: 100%;
             display: block;
             margin: 1rem auto;
         }
 
         /* ===== Footer ===== */
-footer {
-    background-color: #333;
-    color: white;
-    display: flex;
-    flex-direction: column;  /* image au-dessus, texte en dessous */
-    justify-content: center;
-    align-items: center;
-    width: 100%;            /* prend toute la largeur de l'écran */
-    padding: 1rem 0;
-}
+        footer {
+            background-color: #333;
+            color: white;
+            width: 100%;
+            padding: 0; /* important */
+        }
 
-footer img {
-    width: 100%;      /* prend toute la largeur du footer */
-    height: auto;     /* garde les proportions */
-    display: block;
-    margin-bottom: 0.5rem;
-}
+        .footer-content {
+            width: 100%;
+        }
 
-footer p {
-    margin: 0;
-    text-align: center;
-}
+        footer img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        footer p {
+            margin: 0.5rem 0 1rem 0;
+            text-align: center;
+        }
 
         /* ===== Responsive text ===== */
         h2 {
@@ -123,6 +120,13 @@ footer p {
             text-align: center;
         }
 
+        /* ===== Images responsives globales ===== */
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         @media (max-width: 600px) {
             nav {
                 flex-direction: column;
@@ -132,78 +136,107 @@ footer p {
                 margin: 0.5rem 0;
             }
         }
-
-
     </style>
-</head>
-<body>
-    <!-- Header -->
-    <header>
 
-    </header>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#Accueil" onclick="showSection('accueil')">Accueil</a>
-        <a href="#FanFiction" onclick="showSection('FanFiction')">Fan Fiction</a>
-    </nav>
+        </header>
 
-    <!-- Main Sections -->
-    <main>
-        <section id="accueil" class="content active">
-            <h2 text-align="center">Fan Fiction</h2>
-        </section>
+        <!-- Navigation -->
+        <nav>
+            <a href="#Accueil" onclick="showSection('accueil')">Accueil</a>
+            <a href="#FanFiction" onclick="showSection('FanFiction')">Fan Fiction</a>
+        </nav>
 
-        <section id="FanFiction" class="content">
-            <h2>Voici toutes les fan fictions que nous pouvons vous proposez</h2>
-            <p>Pour choisir l'histoire que vous souhaitez découvrir, veuillez simplement cliqué sur la couverture de cette dernière.<br><br>
-                <a href="#" onclick="showSection('alerte')">
-                    <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/revenge_of_draconis.png" alt="revenge_of_draconis" style="width: 20%; height: auto; float: left;">
-                </a>
-            </p>
-        </section>
+        <!-- Main Sections -->
+        <main>
+            <section id="accueil" class="content active">
+                <h2 text-align="center">Fan Fiction</h2>
+            </section>
 
-        <section id="alerte" class="content">
-            <h2>Merci d'avoir choisis Revenge of Draconis</h2>
-            <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/revenge_of_draconis.png" alt="Footer Image">
-            <div id="resume">
-                <p>
-                    résumé à rédiger
+            <section id="FanFiction" class="content">
+                <h2>Voici toutes les fan fictions que nous pouvons vous proposez</h2>
+                <p>Pour choisir l'histoire que vous souhaitez découvrir, veuillez simplement cliqué sur la couverture de cette dernière.<br><br>
+                    <a href="#revenge_of_draconis" onclick="showSection('revenge_of_draconis')">
+                        <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/revenge_of_draconis.png" alt="revenge_of_draconis" style="width: 20%; height: auto; float: left;">
+                    </a>
                 </p>
-            </div>
-            <div id="chapitres">
-                <div class="mot_de_l_auteur">
-                    <a href="#Mot de l'auteur" onclick="showSection('mot_de_l_auteur')">mot de l'auteur</a>
+            </section>
+
+            <section id="revenge_of_draconis" class="content">
+                <h2>Merci d'avoir choisis Revenge of Draconis</h2>
+                <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/revenge_of_draconis.png" alt="Footer Image">
+                <div id="resume">
+                    <p>
+                        résumé à rédiger
+                    </p>
                 </div>
-                    
-                <div id ="chapitre1">
-                    <a href="#chapitre1" onclick="showSection('chapitre1')">Chapitre 1</a>
-                </div>   
+                <div id="chapitres">
+                    <div class="mot_de_l_auteur">
+                        <a href="#Mot de l'auteur" onclick="showSection('mot_de_l_auteur')">mot de l'auteur</a>
+                    </div>
+                        
+                    <div id ="chapitre1">
+                        <a href="#chapitre1" onclick="showSection('chapitre1')">Chapitre 1</a>
+                    </div>   
 
-                <div id ="chapitre2">
-                    <a href="#chapitre2" onclick="showSection('chapitre2')">Chapitre 2</a>
+                    <div id ="chapitre2">
+                        <a href="#chapitre2" onclick="showSection('chapitre2')">Chapitre 2</a>
+                    </div>
                 </div>
+
+            </section>
+
+            <section id="mot_de_l_auteur" class = "content">
+                <h2>
+                    <strong>
+                        <u>
+                            <em>
+                                Mots de l'autrice :
+                            </em>
+                        </u>
+                    </strong>
+                </h2>
+                <p>
+                    Tout d'abord, bienvenue à ma toute première fanfiction. Et pour une compréhension optimale, il faut avoir fini Fairy Tail. <br><br>
+                    Sachez que j'ai écrit cette histoire pour moi, et pas pour les autres, alors même si je sais que vous êtes un public très bienveillant, les haters, passez votre chemin. <br><br>
+                    Cette histoire me trotte dans la tête depuis un bon moment et je rêvais de la mettre sur papier (numérique).<br>
+                    La longueur des chapitres est très aléatoire.<br><br>
+                    Cette histoire va essayer d'être la plus cohérente possible, mais aussi, elle se veut la plus fidèle au manga/anime pour les points qui s'y rapportent.<br>
+                    J'ai écrit cette histoire pour permettre au lecteur de se plonger dans l'univers et surtout, lui faire ressentir des sensations uniques.<br>
+                    Oups, dernière parenthèse, je ne vais pas beaucoup parler des autres couples de la guilde de Fairy Tail, afin de nous concentrer sur les jumeaux et leurs évolutions. Seuls quelques couples emblématiques seront présents.<br><br>
+                    <strong>
+                        Bonne lecture !
+                    </strong>
+
+                </p>
+                <br><br>
+                <nav>
+                    <a href="#Accueil" onclick="showSection('revenge_of_draconis')">Accueil</a>
+                    <a href="#chapitre_1" onclick="showSection('chapitre1')">➡️ Chapitre 1</a>
+                </nav>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/footer.png" alt="Footer Image">
+                <p>&copy; 2026 lulustic. All rights reserved.</p>
             </div>
+        </footer>
 
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/footer1.png" alt="Footer Image">
-            <p>&copy; 2026 lulustic. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- JS pour changer les sections -->
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll(".content").forEach(section => {
-                section.classList.remove("active");
-            });
-            document.getElementById(sectionId).classList.add("active");
-        }
-    </script>
-</body>
+        <!-- JS pour changer les sections -->
+        <script>
+            function showSection(sectionId) {
+                document.querySelectorAll(".content").forEach(section => {
+                    section.classList.remove("active");
+                });
+                document.getElementById(sectionId).classList.add("active");
+            }
+        </script>
+    </body>
 </html>
