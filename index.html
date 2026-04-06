@@ -79,13 +79,19 @@
             opacity: 1;
         }
 
+        /* Appliquer 100% seulement aux images de contenu */
         .content img {
             width: 100%;
             height: auto;
-            max-width: 100%;
             display: block;
-            margin: 1rem auto;
         }
+
+        /* Ne pas toucher aux petites icônes */
+        img.icon {
+            width: auto;
+            display: inline-block;
+        }
+
 
         /* ===== Footer ===== */
         footer {
@@ -155,14 +161,41 @@
         <main>
             <section id="accueil" class="content active">
                 <h2 text-align="center">Fan Fiction</h2>
+                <br>
+                <p style="text-align: left;">
+                    Bonjour,<br>
+                    merci de venir sur mon site qui permet de lire facilement des fan fictions. <br><br>
+
+                    Actuellement, on ne peut retrouver que une seul série : 
+                    <em>
+                        Revenge of Draconis
+                    </em>
+                    . Cette science fiction à été écrit par Plume-de-nuit.
+                </p>
+                <br>
+                <br>
+                <p style = "text-align: left;">
+                    Cette page à été codé par Lucas, pour tout retour (interface ou histoire), vous pouvez me joindre sur mon instagram :
+                    <br>
+                    <a href="https://www.instagram.com/lucas_petpet/?__pwa=1#">
+                        <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/instagram.png" style="width: 5%; height: auto; float: center; background-color: #ffffff; padding: 5px; border-radius: 6px;">
+                    </a>
+                    Je ferai passer votre message à Plume-de-nuit si ce dernier le/la concerne.
+                    <br>
+                    <br>
+                    Bonne lecture à vous !
+                    <br>
+                </p>
+                
             </section>
 
             <section id="FanFiction" class="content">
                 <h2>Voici toutes les fan fictions que nous pouvons vous proposez</h2>
                 <p>Pour choisir l'histoire que vous souhaitez découvrir, veuillez simplement cliqué sur la couverture de cette dernière.<br><br>
-                    <a href="#revenge_of_draconis" onclick="showSection('revenge_of_draconis')">
-                        <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/revenge_of_draconis.png" alt="revenge_of_draconis" style="width: 20%; height: auto; float: left;">
+                    <a href="#revenge_of_draconis" onclick="showSection('revenge_of_draconis')" style="background-color:#ffffff;display:inline-block;padding:5px;">
+                        <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/revenge_of_draconis.png" style="width:20%;height:auto;display:inline-block; float: left;">
                     </a>
+
                 </p>
             </section>
 
@@ -225,7 +258,7 @@
         <footer>
             <div class="footer-content">
                 <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/footer.png" alt="Footer Image">
-                <p>&copy; 2026 lulustic. All rights reserved.</p>
+                <p>&copy; 2026 lulustic - Plume-de-nuit. All rights reserved.</p>
             </div>
         </footer>
 
