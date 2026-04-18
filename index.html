@@ -46,10 +46,22 @@
         nav {
             background-color: #333;
             display: flex;
-            justify-content: left;
+            justify-content: center;
             padding-left: 1%;
             padding: 0.5rem;
             flex-wrap: wrap;
+        }
+
+        .chap_nav{
+            background-color: white;
+        }
+
+        .chap_nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0.5rem 1rem;
+            font-weight: bold;
+            justify-content: center;
         }
 
         nav a {
@@ -124,6 +136,10 @@
 
         p {
             text-align: center;
+        }
+
+        .left-text {
+            text-align: left;
         }
 
         /* ===== Images responsives globales ===== */
@@ -208,22 +224,22 @@
                     </p>
                 </div>
                 <div id="chapitres">
-                    <div class="mot_de_l_auteur">
+                    <div>
                         <a href="#Mot de l'auteur" onclick="showSection('mot_de_l_auteur')">mot de l'auteur</a>
                     </div>
                         
-                    <div id ="chapitre1">
-                        <a href="#chapitre1" onclick="showSection('chapitre1')">Chapitre 1</a>
+                    <div>
+                        <a href="#prologue" onclick="showSection('prologue')">Prologue</a>
                     </div>   
 
-                    <div id ="chapitre2">
-                        <a href="#chapitre2" onclick="showSection('chapitre2')">Chapitre 2</a>
+                    <div>
+                        <a href="#chapitre1" onclick="showSection('chapitre1')">Chapitre 1</a>
                     </div>
                 </div>
 
             </section>
 
-            <section id="mot_de_l_auteur" class = "content">
+            <section id="mot_de_l_auteur" class = "content">  <!--Mot de l'autrice-->
                 <h2>
                     <strong>
                         <u>
@@ -233,25 +249,71 @@
                         </u>
                     </strong>
                 </h2>
-                <p>
-                    Tout d'abord, bienvenue à ma toute première fanfiction. Et pour une compréhension optimale, il faut avoir fini Fairy Tail. <br><br>
-                    Sachez que j'ai écrit cette histoire pour moi, et pas pour les autres, alors même si je sais que vous êtes un public très bienveillant, les haters, passez votre chemin. <br><br>
-                    Cette histoire me trotte dans la tête depuis un bon moment et je rêvais de la mettre sur papier (numérique).<br>
-                    La longueur des chapitres est très aléatoire.<br><br>
-                    Cette histoire va essayer d'être la plus cohérente possible, mais aussi, elle se veut la plus fidèle au manga/anime pour les points qui s'y rapportent.<br>
-                    J'ai écrit cette histoire pour permettre au lecteur de se plonger dans l'univers et surtout, lui faire ressentir des sensations uniques.<br>
-                    Oups, dernière parenthèse, je ne vais pas beaucoup parler des autres couples de la guilde de Fairy Tail, afin de nous concentrer sur les jumeaux et leurs évolutions. Seuls quelques couples emblématiques seront présents.<br><br>
+                <p class="left-text">
+                    Tout d'abord, bienvenue à ma toute première fanfiction. C’est une fanfiction, mais à mon sens, il est possible de la lire sans avoir lu ou regardé l’anime.
+                    <br>
+                    Sachez que j'ai écrit cette histoire pour moi, et pas pour les autres, alors même si je sais que vous êtes un public très bienveillant, les haters, passez votre chemin.
+                    <br>
+                    Cette histoire me trotte dans la tête depuis un bon moment et je rêvais de la mettre sur papier (numérique).  Cela fait 5 ans que je l’écris, afin qu’elle me plaise et qu’elle soit la plus aboutie possible.
+                    <br>
+                    Cette histoire va essayer d'être la plus cohérente possible, mais aussi, elle se veut la plus fidèle au manga/anime pour les points qui s'y rapportent.
+                    <br>
+                    J'ai écrit cette histoire pour permettre au lecteur de se plonger dans l'univers et surtout, lui faire ressentir des sensations uniques. Vous le remarquerez sûrement, mais cette fanfiction se rapproche plus d’une fiction qu’autre chose. En effet, elle va explorer un aspect sombre de cet univers, et va grandement s’éloigner. J’ai créé nombre de personnages et il ne me reste plus que les noms de base pour me raccrocher à Fairy Tail.
+                    <br>
+                    En réponse à ces observations, je me suis questionnée sur la pertinence d’une fanfiction, alors que je pouvais facilement en faire une fiction. Mais après 5 ans de travail, je refuse de tout recommencer. Mais si cette histoire vous plaît, et que vous trouvez ça pertinent, je peux peut-être en faire une fiction. Il ne me resterait pas énormément de travail pour cela.
+                    <br>
+                    Quoi qu’il en soit, je ne vais pas beaucoup parler des autres couples de la guilde de Fairy Tail, histoire de se concentrer sur les jumeaux et leurs évolutions. Seuls quelques couples emblématiques seront présents.
+                    <br>
+                    Si vous avez des questions, des remarques, des incohérences ou des fautes d’orthographe à souligner, n’hésitez pas, et j’espère que ça vous plaira.
+                    <br>
+                    Bonne lecture !
                     <strong>
-                        Bonne lecture !
+                        Avertissements : violence, sang, manipulation, blessures, assassinat, kidnapping, injures, torture, mutilation, décapitation, descriptions explicites de blessures, haine, vengeance.
                     </strong>
 
                 </p>
                 <br><br>
-                <nav>
-                    <a href="#Accueil" onclick="showSection('revenge_of_draconis')">Accueil</a>
+                <nav class="chap_nav">
+                    <a href="#Accueil" onclick="showSection('revenge_of_draconis')">Retour</a>
+                    <a href="#prologue" onclick="showSection('prologue')">➡️ Prologue</a>
+                </nav>
+            </section>
+
+            <section id="prologue" class = "content">  <!--Prologue-->
+                <h2>
+                    <strong>
+                        <u>
+                            <em>
+                                PROLOGUE
+                            </em>
+                        </u>
+                    </strong>
+                </h2>
+                <p class="left-text">
+                    Dans un monde où la magie règne, l’Oracle royal murmura :
+                    <br>
+                    <br>
+                    <em>
+                        — Un garçon, né sous un ciel sans étoiles, défiera les lois de la nature. À travers les batailles, il forgera sa puissance, les éléments se pliant à sa volonté. Mais la haine envahira son cœur, le consumant de l'intérieur. Il se laissera embarquer par cette sombre émotion, transformant sa douleur en une force infinie. Les ténèbres s'inclineront devant lui, et les dragons des cieux trembleront à son approche. Les constellations elles-mêmes frémiront face à son ascension. Il percera le monde de sa puissance infinie, semant le chaos et la destruction sur son passage. Une nouvelle ère, marquée par la crainte et l'émerveillement, s'étendra sur le monde, proféra la vieille femme en levant les bras au ciel.
+                    </em>    
+                    <br>
+                    <br>
+                    Plus un bruit ne régnait sur la salle du conseil et les dirigeants des sept grandes cours de Draconis se consultèrent du regard. Puis, un brouhaha qui fit trembler les lustres au plafond s'éleva. On ne s’entendait plus parler, chacun mêlant à la conversation son commentaire personnel.
+                    <br>
+                    <br>
+                    — Silence ! tonna le Roi des Dragons, dirigeant suprême des espèces magiques peuplant Draconis. Cela ne sert à rien de paniquer. Nous ne savons pas quand cette prophétie se réalisera. Ne perdez pas votre sang-froid, mes amis.
+                    <br>
+                    <br>
+                    — Parce que cette prophétie ne t'inquiète pas, toi, Hakai ? objecta Alios, le roi des Démons. Le monde que ce garçon va détruire pourrait très bien être Draconis. Je refuse de mettre en danger les gens de ma cour. Pas comme la dernière fois.
+                </p>
+                <br><br>
+                <nav class="chap_nav">
+                    <a href="#Accueil" onclick="showSection('revenge_of_draconis')">Retour</a>
                     <a href="#chapitre_1" onclick="showSection('chapitre1')">➡️ Chapitre 1</a>
                 </nav>
             </section>
+
+
         </main>
 
         <!-- Footer -->
