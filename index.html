@@ -104,6 +104,42 @@
             display: inline-block;
         }
 
+        .title-line {
+            display: flex;
+            align-items: center;      /* aligne verticalement */
+            justify-content: center;  /* centre tout sur la ligne */
+            gap: 10px;                /* espace entre les éléments */
+        }
+
+        .title-line img {
+            height: 60px;             /* ajuste la taille des images */
+            width: auto;
+        }
+
+        .chapter-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 1rem;
+        }
+
+        .chapter-title img {
+            flex: 1;               /* Les images prennent l’espace disponible */
+            height: auto;          /* Hauteur automatique */
+            max-height: 80px;      /* Limite pour éviter qu’elles deviennent trop grandes */
+            object-fit: contain;   /* Garde les proportions */
+        }
+
+        .chapter-title span {
+            flex: 0;               /* Le texte garde sa taille naturelle */
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: underline;
+            font-style: italic;
+            white-space: nowrap;   /* Empêche le titre de se couper */
+        }
+
 
         /* ===== Footer ===== */
         footer {
@@ -176,6 +212,7 @@
         <!-- Main Sections -->
         <main>
             <section id="accueil" class="content active">
+                <br>
                 <h2 text-align="center">Fan Fiction</h2>
                 <br>
                 <p style="text-align: left;">
@@ -206,6 +243,7 @@
             </section>
 
             <section id="FanFiction" class="content">
+                <br>
                 <h2>Voici toutes les fan fictions que nous pouvons vous proposez</h2>
                 <p>Pour choisir l'histoire que vous souhaitez découvrir, veuillez simplement cliqué sur la couverture de cette dernière.<br><br>
                     <a href="#revenge_of_draconis" onclick="showSection('revenge_of_draconis')" style="background-color:#ffffff;display:inline-block;padding:5px;">
@@ -216,6 +254,7 @@
             </section>
 
             <section id="revenge_of_draconis" class="content">
+                <br>
                 <h2>Merci d'avoir choisis Revenge of Draconis</h2>
                 <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/revenge_of_draconis.png" alt="Footer Image">
                 <div id="resume">
@@ -240,6 +279,7 @@
             </section>
 
             <section id="mot_de_l_auteur" class = "content">  <!--Mot de l'autrice-->
+                <br>
                 <h2>
                     <strong>
                         <u>
@@ -267,6 +307,8 @@
                     Si vous avez des questions, des remarques, des incohérences ou des fautes d’orthographe à souligner, n’hésitez pas, et j’espère que ça vous plaira.
                     <br>
                     Bonne lecture !
+                    <br>
+                    <br>
                     <strong>
                         Avertissements : violence, sang, manipulation, blessures, assassinat, kidnapping, injures, torture, mutilation, décapitation, descriptions explicites de blessures, haine, vengeance.
                     </strong>
@@ -280,7 +322,9 @@
             </section>
 
             <section id="prologue" class = "content">  <!--Prologue-->
-                <h2>
+                <br>
+                <h2 class = title-line>
+                    <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/prologue.jpg" alt="Image Gauche">
                     <strong>
                         <u>
                             <em>
@@ -288,6 +332,7 @@
                             </em>
                         </u>
                     </strong>
+                    <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/prologue1.jpg" alt="Image Droite">
                 </h2>
                 <p class="left-text">
                     Dans un monde où la magie règne, l’Oracle royal murmura :
@@ -305,6 +350,57 @@
                     <br>
                     <br>
                     — Parce que cette prophétie ne t'inquiète pas, toi, Hakai ? objecta Alios, le roi des Démons. Le monde que ce garçon va détruire pourrait très bien être Draconis. Je refuse de mettre en danger les gens de ma cour. Pas comme la dernière fois.
+                    <br>
+                    <br>
+                    — Cela pourrait aussi bien être le monde des humains, riposta Hakai en se redressant sur son trône. Quoi qu'il en soit, nous devons nous tenir prêts. Nous, tous autant que nous sommes. Que nous soyons Fées, Vampires, Sirènes, Dieux, Démons, Anges, ou Dragons. Nous sommes à l'aube d'une nouvelle époque, et cette prophétie va changer l'équilibre du monde.
+                    <br>
+                    — Que fais-tu des mouvements de protestation qui gangrènent nos cours ? s'insurgea Galia, la reine des Dieux. Nous ne pouvons pas vivre dans la peur constante de cette prophétie sans régler la situation actuelle. Ces mouvements grondent, et si les insurgés se rendent compte que nos gouvernements respectifs sont fragilisés par une prophétie hypothétique, ils profiteront de cette faiblesse pour nous renverser. Les Fenrirs et les Arachnides, exilés, briseront les barrières magiques les retenant prisonniers dans leurs domaines pour rejoindre les mécontents.
+                    <br>
+                    — Nos barrières magiques vont parfaitement bien, gronda Hakai, montrant les dents.
+                    <br>
+                    — Il suffit ! siffla le roi des Vampires. Vous pensez que c'est une bonne idée de se diviser avec cette menace qui plane au-dessus de nos têtes ? Je ne crois pas. Alors regagnons nos palais, faisons des rapports à nos légions armées et gardons en tête que, si cette menace existe ou existera, nous serons prêts à prendre les armes.
+                    <br>
+                    Les dirigeants acquiescèrent et disparurent par téléportation, leurs suites armées sur leurs talons. Le silence régna alors dans la salle du conseil, où Hakai Draconis demeurait assis sur son trône, la reine à ses côtés. Il congédia l'Oracle et s'affaissa sur l'accoudoir de son fauteuil.
+                    <br>
+                    — Tu crois que le garçon naîtra sur notre territoire ? demanda-t-il à sa reine.
+                    <br>
+                    — Je ne pense pas. La guerre qu'il y a eu en Fiore il y a quelque temps annonçait le renversement du pouvoir et l'avènement de nouvelles méthodes de vie. Nous n'avons pas eu ce genre de changement, mais la seule chose que nous pouvons faire, c'est attendre. Il est évident que si cette prophétie est classée d'ordre principal, un évènement spécial va accompagner la venue au monde de l'Élu. Nous pouvons envoyer des espions à Ishgar, à Guiltina et à Arakitacia, à Earthland, pour surveiller, mais nous ne pouvons rien faire d'autre. Ne te fais pas de mauvais sang. Les choses doivent changer. Si une révolution doit éclater pour que le monde en sorte grandi, alors soit. Mais sache que je serai toujours là, même si la vie m'arrache à toi.
+                    <br>
+                    — Merci, Celestia, murmura Hakai en embrassant sa femme. Je ne sais pas ce que je serais devenu sans toi.
+                    <br>
+                    — Tu ne serais plus roi depuis longtemps, se moqua-t-elle en lui donnant une bourrade.
+                    <br>
+                    — Comment oses-tu manquer de respect à ton roi ?
+                    <br>
+                    — Je manque de respect à mon mari, pas à mon roi. Dépêche-toi. Acorhys va commencer le dîner sans nous. Tu sais comment il est. Ton fils te ressemble tellement, sourit-elle en sortant de la salle.
+                    <br>
+                    Hakai la suivit, les mains dans les poches de son costume noir. Malgré les menaces qui pesaient sur sa cour, il avait des alliés et saurait faire face.
+                    <br>
+                    <br>
+                    <p text-align = "center">
+                        ★
+                    </p>
+                    <br>
+                    <br>
+                    <p text-align="center">
+                        PDV omniscient – Fiore
+                    </p>
+                    <br>
+                    <br>
+                    Cette nuit-là, le tonnerre gronda. La terre trembla alors que les cris de la femme en souffrance résonnaient dans l'infirmerie. De brusques rafales balayèrent Magnolia par vagues, en écho des poussées de la souffrante. Un éclair frappa la cime des arbres, enflamma le bois et la terre couverte d'épines de pins.
+                    <br>
+                    Les luminaires explosèrent et des ombres informes, qui n'étaient pas dues à la lune qui se découvrait parfois, engloutirent les bâtiments. La lumière semblait avoir quitté le village, soumis aux éléments dans une nuit sans étoiles.
+                    <br>
+                    Le murmure du vent entra par la fenêtre ouverte, rafraichissant la femme qui accouchait entre les draps, soutenue par le père et la barmaid de Fairy Tail.
+                    <br>
+                    Soudain, alors que l'enfant était encore recouvert du sang de sa mère, tout s'arrêta. Le silence prit place alors que le tumulte régnait quelques secondes auparavant.
+                    <br>
+                    Le père, à l'instar de la barmaid, observa sa progéniture hurlante avec crainte.
+                    <br>
+                    Un éclair bleu nuit, d'une beauté rare, déchira le ciel, alors que plus aucun nuage ne pouvait troubler l'immensité sombre de la nuit. Le grondement de celui-ci, semblable au rugissement d'une créature, fit trembler les murs et les vitres, électrisa les personnes présentes dans la pièce, et les réminiscences de la lumière bleue s'enroulèrent imperceptiblement autour du nouveau-né.
+                    <br>
+                    La peur d'un présage, d'un signe, s'insinua lentement dans le père, qui espérait avoir mal vu. Un frisson incontrôlé descendit de son dos, et il ne put s’empêcher de se dire que ce présage n’avait rien de rassurant.
+                    <br>
                 </p>
                 <br><br>
                 <nav class="chap_nav">
@@ -313,7 +409,19 @@
                 </nav>
             </section>
 
+            <section id="chapitre1" class = "content">  <!--Chapitre 1-->
+                <br>
+                <h2 class="chapter-title">
+                    <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/chapitre1.jpg" alt="Image gauche">
+                    <span>
+                        Chapitre 1
+                    </span>
+                    <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/chapitre1.jpg" alt="Image droite">
+                </h2>
 
+                <p class="left-text">
+
+                </p>
         </main>
 
         <!-- Footer -->
@@ -331,7 +439,11 @@
                     section.classList.remove("active");
                 });
                 document.getElementById(sectionId).classList.add("active");
+
+                // Remonte en haut de la page
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         </script>
+
     </body>
 </html>
