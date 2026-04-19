@@ -1,217 +1,214 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fan Fiction</title>
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/icone.ico">
+    <head> <!-- En tête + CSS -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fan Fiction</title>
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/icone.ico">
 
-    <style>
-        /* ===== Reset ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        <style>
+            /* ===== Reset ===== */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: white;
-        }
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background: white;
+            }
 
-        /* ===== Header ===== */
-        header {
-            background-image: url('https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/baniere.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            /* ===== Header ===== */
+            header {
+                background-image: url('https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/baniere.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
 
-            aspect-ratio: 16 / 9;
-            width: 100%;
+                aspect-ratio: 16 / 9;
+                width: 100%;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
 
-        header h1 {
-            color: white;
-            font-size: 1.8rem;
-        }
+            header h1 {
+                color: white;
+                font-size: 1.8rem;
+            }
 
-        /* ===== Navigation ===== */
-        nav {
-            background-color: #333;
-            display: flex;
-            justify-content: center;
-            padding-left: 1%;
-            padding: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .chap_nav{
-            background-color: white;
-        }
-
-        .chap_nav a {
-            color: black;
-            text-decoration: none;
-            margin: 0.5rem 1rem;
-            font-weight: bold;
-            justify-content: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0.5rem 1rem;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: red;
-        }
-
-        /* ===== Main sections ===== */
-        main {
-            padding: 0 15%;
-        }
-
-        .content {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .content.active {
-            display: block;
-            opacity: 1;
-        }
-
-        /* Appliquer 100% seulement aux images de contenu */
-        .content img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Ne pas toucher aux petites icônes */
-        img.icon {
-            width: auto;
-            display: inline-block;
-        }
-
-        .title-line {
-            display: flex;
-            align-items: center;      /* aligne verticalement */
-            justify-content: center;  /* centre tout sur la ligne */
-            gap: 10px;                /* espace entre les éléments */
-        }
-
-        .title-line img {
-            height: 60px;             /* ajuste la taille des images */
-            width: auto;
-        }
-
-        .chapter-title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            gap: 1rem;
-        }
-
-        .chapter-title img {
-            flex: 1;               /* Les images prennent l’espace disponible */
-            height: auto;          /* Hauteur automatique */
-            max-height: 80px;      /* Limite pour éviter qu’elles deviennent trop grandes */
-            object-fit: contain;   /* Garde les proportions */
-        }
-
-        .chapter-title span {
-            flex: 0;               /* Le texte garde sa taille naturelle */
-            font-size: 2rem;
-            font-weight: bold;
-            text-decoration: underline;
-            font-style: italic;
-            white-space: nowrap;   /* Empêche le titre de se couper */
-        }
-
-
-        /* ===== Footer ===== */
-        footer {
-            background-color: #333;
-            color: white;
-            width: 100%;
-            padding: 0; /* important */
-        }
-
-        .footer-content {
-            width: 100%;
-        }
-
-        footer img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        footer p {
-            margin: 0.5rem 0 1rem 0;
-            text-align: center;
-        }
-
-        /* ===== Responsive text ===== */
-        h2 {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            text-align: center;
-        }
-
-        .left-text {
-            text-align: left;
-        }
-
-        /* ===== Images responsives globales ===== */
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        @media (max-width: 600px) {
+            /* ===== Navigation ===== */
             nav {
-                flex-direction: column;
+                background-color: #333;
+                display: flex;
+                justify-content: center;
+                padding-left: 1%;
+                padding: 0.5rem;
+                flex-wrap: wrap;
+            }
+
+            .chap_nav{
+                background-color: white;
+            }
+
+            .chap_nav a {
+                color: black;
+                text-decoration: none;
+                margin: 0.5rem 1rem;
+                font-weight: bold;
+                justify-content: center;
             }
 
             nav a {
-                margin: 0.5rem 0;
+                color: white;
+                text-decoration: none;
+                margin: 0.5rem 1rem;
+                font-weight: bold;
             }
-        }
-    </style>
+
+            nav a:hover {
+                color: red;
+            }
+
+            /* ===== Main sections ===== */
+            main {
+                padding: 0 15%;
+            }
+
+            .content {
+                display: none;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+            .content.active {
+                display: block;
+                opacity: 1;
+            }
+
+            /* Appliquer 100% seulement aux images de contenu */
+            .content img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            /* Ne pas toucher aux petites icônes */
+            img.icon {
+                width: auto;
+                display: inline-block;
+            }
+
+            .title-line {
+                display: flex;
+                align-items: center;      /* aligne verticalement */
+                justify-content: center;  /* centre tout sur la ligne */
+                gap: 10px;                /* espace entre les éléments */
+            }
+
+            .title-line img {
+                height: 60px;             /* ajuste la taille des images */
+                width: auto;
+            }
+
+            .chapter-title {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                gap: 1rem;
+            }
+
+            .chapter-title img {
+                flex: 1;               /* Les images prennent l’espace disponible */
+                height: auto;          /* Hauteur automatique */
+                max-height: 80px;      /* Limite pour éviter qu’elles deviennent trop grandes */
+                object-fit: contain;   /* Garde les proportions */
+            }
+
+            .chapter-title span {
+                flex: 0;               /* Le texte garde sa taille naturelle */
+                font-size: 2rem;
+                font-weight: bold;
+                text-decoration: underline;
+                font-style: italic;
+                white-space: nowrap;   /* Empêche le titre de se couper */
+            }
+
+
+            /* ===== Footer ===== */
+            footer {
+                background-color: #333;
+                color: white;
+                width: 100%;
+                padding: 0; /* important */
+            }
+
+            .footer-content {
+                width: 100%;
+            }
+
+            footer img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            footer p {
+                margin: 0.5rem 0 1rem 0;
+                text-align: center;
+            }
+
+            /* ===== Responsive text ===== */
+            h2 {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            .left-text {
+                text-align: left;
+            }
+
+            /* ===== Images responsives globales ===== */
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            @media (max-width: 600px) {
+                nav {
+                    flex-direction: column;
+                }
+
+                nav a {
+                    margin: 0.5rem 0;
+                }
+            }
+        </style>
 
     </head>
-    <body>
-        <!-- Header -->
-        <header>
+    <body> <!-- Corps de la page web -->
+        <header><!-- Header vide -->
 
         </header>
 
-        <!-- Navigation -->
-        <nav>
+        <nav><!-- Navigation -->
             <a href="#Accueil" onclick="showSection('accueil')">Accueil</a>
             <a href="#FanFiction" onclick="showSection('FanFiction')">Fan Fiction</a>
         </nav>
-
-        <!-- Main Sections -->
-        <main>
-            <section id="accueil" class="content active">
+        
+        <main><!-- Main Sections -->
+            <section id="accueil" class="content active"><!-- 1ère page affiché à la connexion = Page d'accueil -->
                 <br>
                 <h2 text-align="center">Fan Fiction</h2>
                 <br>
@@ -242,7 +239,7 @@
                 
             </section>
 
-            <section id="FanFiction" class="content">
+            <section id="FanFiction" class="content"><!-- Page dédié au fan fiction pour faire le choix -->
                 <br>
                 <h2>Voici toutes les fan fictions que nous pouvons vous proposez</h2>
                 <p>Pour choisir l'histoire que vous souhaitez découvrir, veuillez simplement cliqué sur la couverture de cette dernière.<br><br>
@@ -253,7 +250,7 @@
                 </p>
             </section>
 
-            <section id="revenge_of_draconis" class="content">
+            <section id="revenge_of_draconis" class="content"><!-- Page dédié à la fan fiction "Revenge of Draconis" -->
                 <br>
                 <h2>Merci d'avoir choisis Revenge of Draconis</h2>
                 <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/revenge_of_draconis.png" alt="Footer Image">
@@ -278,7 +275,7 @@
 
             </section>
 
-            <section id="mot_de_l_auteur" class = "content">  <!--Mot de l'autrice-->
+            <section id="mot_de_l_auteur" class = "content">  <!-- Mot de l'autrice - Revenge of Draconis -->
                 <br>
                 <h2>
                     <strong>
@@ -321,7 +318,7 @@
                 </nav>
             </section>
 
-            <section id="prologue" class = "content">  <!--Prologue-->
+            <section id="prologue" class = "content">  <!--Prologue - Revenge of Draconis -->
                 <br>
                 <h2 class = title-line>
                     <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/prologue.jpg" alt="Image Gauche">
@@ -409,7 +406,7 @@
                 </nav>
             </section>
 
-            <section id="chapitre1" class = "content">  <!--Chapitre 1-->
+            <section id="chapitre1" class = "content">  <!--Chapitre 1 - Revenge of Draconis -->
                 <br>
                 <h2 class="chapter-title">
                     <img src="https://raw.githubusercontent.com/Lulustic/FanFiction-web-site/main/images/chapitre1.jpg" alt="Image gauche">
@@ -420,8 +417,224 @@
                 </h2>
 
                 <p class="left-text">
-
+                    <br>
+                    <br>
+                    Je compris que quelque chose avait changé avant même d'ouvrir les yeux.
+                    <br>
+                    Ce n'était pas la douleur : elle avait été mon unique repère durant des semaines, trop familière pour encore m'alarmer. Non. C'était autre chose. Une sensation plus diffuse, plus profonde. Comme si mon corps ne m'appartenait plus tout à fait, comme s'il avait glissé d'un cran hors de sa place naturelle.
+                    <br>
+                    Je respirais lentement, prudemment, comme pour m'assurer que j'étais toujours moi. Puis, je la sentis, plus forte encore que ces quatre dernières années. Elle qui battait furieusement, en cœur avec la rage qui infusait dans mon corps depuis tant d'années. 
+                    <br>
+                    La 
+                    <em>
+                        magie.
+                    </em>
+                    <br>
+                    Ce matin-là, ce ne fut pas un choc, comme tous ceux qui l'avaient précédé. Ni une brûlure, comme celle que je ressentais chaque fois que cette potion ignoble glissait dans ma gorge. Un frémissement. Une vibration sourde, tapie sous ma peau, attentive à chacun de mes souffles. J'en eus presque le vertige. Pendant dix-sept ans, le monde avait été silencieux. Brusquement, il murmurait.
+                    <br>
+                    <em>
+                        Voilà donc ce qu'ils ressentaient tous.
+                    </em>
+                    <br>
+                    La pensée n'avait rien d'euphorique. Elle me laissa au contraire un goût amer. Trop tard. Beaucoup trop tard pour la naïveté, pour l'émerveillement. Je n'avais pas gagné un don. J'avais forcé une porte. Ce dont j'avais été privé toute ma vie m'appartenait désormais, mais je n'en ressentais pas la victoire. Cela aurait été bien trop prétentieux de ma part.
+                    <br>
+                    Je me redressai lentement sur le lit étroit de la chambre d'amis de la maison de Polyussica. Le bois grinça sous mon poids. Mes muscles protestèrent aussitôt, tendus, douloureux, comme s'ils n'avaient pas encore accepté la transformation qu'on leur avait imposée. J'ignorai la brûlure. J'avais appris depuis longtemps à vivre avec ce genre de sensations.
+                    <br>
+                    Je posai les pieds au sol. Ils tinrent.
+                    <br>
+                    C'était suffisant.
+                    <br>
+                    La potion avait cessé d'agir. Je le savais avec une certitude étrange, presque froide. Alors que chaque foutue minute que je passai sur Terre avait été un supplice silencieux, ignoré par tous, aujourd'hui, ce n'était qu'une douleur sous-jacente, si mince qu'elle n'imbibait que mes muscles atrophiés. Il n'y aurait pas de retour en arrière. Plus d'atténuation progressive. Ce qui était fait l'était définitivement.
+                    <br>
+                    Je me levai et m'approchai de la fenêtre. La forêt, seule témoin de ma souffrance, s'étendait devant moi, encore endormie, paisible, indifférente. Le ciel était pâle, strié de nuages étirés. Rien, à l'extérieur, ne semblait avoir conscience du bouleversement qui venait de s'opérer.
+                    <br>
+                    Je posai une main contre la vitre froide.
+                    <br>
+                    Erreur.
+                    <br>
+                    La magie afflua aussitôt, trop vive, trop réactive. Le verre vibra légèrement sous mes doigts. Je retirai ma main d'un geste sec, le cœur soudain trop rapide.
+                    <br>
+                    <em>
+                        Instable.
+                    </em>
+                    <br>
+                    Polyussica n'aurait pas besoin de me le dire. Je le savais déjà.
+                    <br>
+                    Je serrai les poings, inspirai profondément. La sensation se calma, obéissante, presque docile. Trop docile. Cela aussi m'inquiéta. La magie n'était pas censée répondre aussi vite à quelqu'un comme moi. Elle semblait réagir au froid, qu'il soit extérieur ou interne. Ce même froid que je ressentais quand je devais me rendre à la guilde de Fairy Tail. Le même froid que je ressentais quand mon « père », Natsu Heartfilia-Dragnir, me prenait de haut, me prenant pour un moins que rien, un non-mage.
+                    <br>
+                    Un pas lourd résonna dans le couloir.
+                    <br>
+                    Je n'eus pas besoin de me retourner.
+                    <br>
+                    — Tu es réveillé, constata Polyussica derrière moi.
+                    <br>
+                    Sa voix était grave, un peu rauque, comme toujours. Mais j'y percevais autre chose : une tension retenue qu'elle ne s'autorisait jamais à montrer ouvertement.
+                    <br>
+                    — Oui, répondis-je simplement, sans la regarder, contemplant la neige au dehors.
+                    <br>
+                    — Trop tôt, ajouta-t-elle simplement en s'approchant.
+                    <br>
+                    Je haussai légèrement les épaules.
+                    <br>
+                    — Je ne dormais plus.
+                    <br>
+                    Elle ne me reprocha rien. Elle ne le faisait jamais directement. Polyussica se contentait d'observer, d'évaluer. Pourtant, lorsqu'elle posa deux doigts contre mon poignet, son geste fut étonnamment doux.
+                    <br>
+                    Je sentis sa magie m'effleurer, prudente, méticuleuse. Elle analysait tout : le rythme de mon cœur, les fluctuations de mon énergie, les zones de tension encore dangereuses.
+                    <br>
+                    — La douleur ? demanda-t-elle enfin, plus bas.
+                    <br>
+                    — Supportable, répondis-je.
+                    <br>
+                    Elle releva les yeux vers moi, et je compris aussitôt que ce n'était pas la réponse qu'elle attendait.
+                    <br>
+                    — Présente, corrigeai-je, plus honnêtement.
+                    <br>
+                    Ses lèvres se pincèrent légèrement. Signe d'une fatigue que je ne lui connaissais que trop bien.
+                    <br>
+                    — Tu as cessé de la repousser, remarqua-t-elle.
+                    <br>
+                    — Je ne le faisais pas volontairement, admis-je. C'était comme un blocage. Et ça faisait mal… si mal, Polyussica. Comme une lente agonie. Chaque jour que je buvais cette potion, chaque fois que j'apprenais à contrôler cette magie, j'avais l'impression de me déchirer.
+                    <br>
+                    Elle me fixa longuement, comme si elle cherchait quelque chose derrière mes mots. Puis elle soupira, très doucement.
+                    <br>
+                    — Tu comprends ce que tu as fait, Nash ? reprit-elle après un silence.
+                    <br>
+                    — Oui.
+                    <br>
+                    — Alors dis-le-moi.
+                    <br>
+                    Je pris le temps d'inspirer.
+                    <br>
+                    — J'ai brisé un équilibre, dis-je lentement. Le mien. Et peut-être plus que ça. Ce blocage… comme si j'avais brisé quelque chose de plus grand que moi.
+                    <br>
+                    Polyussica hocha la tête. Son regard se fit plus grave, mais aussi… plus inquiet.
+                    <br>
+                    — Repose-toi aujourd'hui, déclara-t-elle en reculant. Demain, nous verrons ce que ton corps accepte. Et ce que ta magie exige.
+                    <br>
+                    Elle se dirigea vers la porte, puis s'arrêta.
+                    <br>
+                    — Tu as bien fait de tenir, ajouta-t-elle sans se retourner.
+                    <br>
+                    Ce furent les seuls mots de tendresse qu'elle s'autorisa. Ils suffirent.
+                    <br>
+                    Lorsqu'elle sortit, le silence revint. Mais il n'était plus vide.
+                    <br>
+                    — Tu fais cette tête-là maintenant ?
+                    <br>
+                    La voix de Lorian me tira de mes pensées. Il passa la tête par l'entrebâillement de la porte, un sourire forcé accroché aux lèvres.
+                    <br>
+                    — Tu ressembles à quelqu'un qui a perdu une bataille, lança-t-il d'un ton faussement léger.
+                    <br>
+                    — Et toi, à quelqu'un qui aurait dû être en cours, répliquai-je.
+                    <br>
+                    Il haussa les épaules et entra sans demander la permission.
+                    <br>
+                    — Ça fait quoi ? demanda-t-il, plus doucement.
+                    <br>
+                    Je cherchais les mots. Le sous-entendu de sa question était clair, mais trouver une réponse adéquate était ardu.
+                    <br>
+                    — C'est comme… entendre enfin le monde. Mais sans en comprendre la langue.
+                    <br>
+                    Il sourit, sincère cette fois.
+                    <br>
+                    — Ça te ressemble.
+                    <br>
+                    En effet, ça me ressemblait. Ma vie avait toujours été un mystère, de ma naissance à maintenant. J'étais né non-mage, le premier de ma lignée depuis l'avènement de la magie à Fiore. J'avais souffert, beaucoup, en intégrant la guilde renommée de mes parents, sans pourtant m'y sentir à ma place. Jamais je n'y avais eu ma place. Ma sœur jumelle, Freya, en était le prodige. Moi, je n'en étais que le déchet.
+                    <br>
+                    Toute ma vie j'avais été brutalisé par la vie, par les remarques, les critiques, les murmures au coin des rues de Magnolia, dessinant dans mon sillage un sentiment malaisant, sombre. Alors, je m'étais construit une carapace. Un bouclier émotionnel et physique.
+                    <br>
+                    Ce bouclier était toujours relevé, toujours prêt à me protéger. Ennui feint, froideur, indifférence, rage glacée… peut-être était-ce ce qui avait lié cette magie au froid. Il m'habitait tel une seconde peau.
+                    <br>
+                    À l'abri dans la forêt de ma grand-mère de cœur, j'avais enrichi cette carapace, aussi bien en me fortifiant qu'en m'enfonçant dans le lac gelé de ma vie. Je n'avais plus supporté les railleries, les insultes à peine voilées de mon « père », la supériorité manifeste de ma sœur et l'inaction de ma mère.
+                    <br>
+                    Mu par ma rage, sur un coup de tête, j'avais pris en main mon destin. Et j'avais bu cette potion, que j'avais moi-même réclamée. Depuis, jour après jour, soir après soir, je souffrais, mon corps déchiré, la tête martelée, l'esprit battu. Je m'évanouissais à chaque fois, pour le mieux. Mais chaque matin, me lever de mon lit relevait du défi, poser mes pieds sur le sol et tenir sur mes jambes, de l'exploit.
+                    <br>
+                    Mais personne ne s'inquiétait. Personne, sauf Polyussica, Lorian, le fils de Gajeel et Reby Redfox, et eux-mêmes. Ils étaient les seuls à me voir. À me voir vraiment, tel que j'étais. Un adolescent qui a souffert pour devenir fort, pour se battre, pour se 
+                    <em>
+                        venger
+                    </em>
+                    . Ils connaissaient mes intentions, pourtant, jamais ils ne m'avaient jugé.
+                    <br>
+                    Lorsque j'avais demandé à Gajeel de m'entraîner, il y avait de ça quelques années, en préparation pour la potion, il n'avait pas hésité. Peut-être par pitié pour l'enfant que j'étais autrefois. Depuis, assombri par mon entraînement, par la pression que je m'imposais pour laisser mon secret intact, je n'étais plus un enfant frêle et faible. J'étais la meilleure version de moi-même sans être bon pour autant. La bonté n'avait pas sa place dans ma vie.
+                    <br>
+                    La souffrance qui résidait dans mes muscles manqua de me faire tomber quand je m'avançais en grimaçant dans la chaumière de Polyussica. Ignorant la douleur, je sortis, et allai marcher dans la forêt, écoutant simplement Lorian qui s'entrainait dans la clairière derrière la bâtisse, aidé par les conseils de son père. 
+                    <br>
+                    En ce début d'hiver, il neigeait. Je ne m'étais pas couvert. Je ne sentis pas le froid qui engourdissait mes doigts. Je ne sentis que cette magie instable qui rugissait mais que je muselais pourtant parfaitement. Elle se déclenchait quand elle le voulait, créant des volutes dorées le long de ma peau, signe précurseur qu'elle pouvait jaillir à tout moment, démesurée.
+                    <br>
+                    Nous le savions tous, ce n'était pas normal. Je me sentais entier avec cette magie, comme si elle avait toujours fait partie de moi. Seulement, elle était trop grande. Bien trop. Je la contrôlais, la veille avait été la dernière fois que je prenais la potion depuis des mois, mais elle ne semblait pas stabilisée. Pendant quatre ans, j'avais appris à m'en servir, à attaquer, à tuer.
+                    <br>
+                    Je m'assis sur une souche, regardant Lorian, méticuleux dans ses mouvements. Mes muscles n'étaient pas encore prêts à l'effort, mais bien vite, porté par l'habitude et mon instinct, je me battrais. Pas pour ma survie, mais pour pouvoir me protéger, et faire de grandes choses.
+                    <br>
+                    Je me levais, enfin prêt à en découdre. En me voyant apparaître dans un coin, pour m'échauffer, la posture de Lorian se raidit, dans l'expectative d'une attaque soudaine. Avec lui, je n'étais jamais tendre lorsque je me battais.
+                    <br>
+                    Puis, sans rien dire, je fondis sur lui, en position d'attaque. Il para mon coup, pivota sur sa jambe droite et répliqua par un coup de pied rotatif contre mes côtes. Je parai le coup de mon avant-bras et attrapai sa cheville, tirant sur l'articulation. Il tomba et je me plaçai au-dessus de lui, mes jambes enserrant ses hanches, les poignets plaqués au sol.
+                    <br>
+                    — J'abandonne, grogna Lorian en relâchant la tension dans son corps.
+                    <br>
+                    — On n'abandonne pas, chez les Redfox, rétorquai-je, placide. On avoue sa défaite.
+                    <br>
+                    — Ça ne fait aucune différence, réfuta Lorian.
+                    <br>
+                    — Au contraire, intervint Gajeel tandis que je me relevai, tendant ma main à Lorian qui la saisit. Abandonner, c'est avouer sa faiblesse et avouer qu'on y est pas allé à fond. Avouer sa défaite, c'est comprendre ses erreurs, et c'est une promesse de revanche.
+                    <br>
+                    Lorian marmonna quelque chose en époussetant son pantalon et je le regardais faire, l'observant se battre avec la neige qui recouvrait le tissu.
+                    <br>
+                    Soudain, je sentis quelque chose de froid frapper l'arrière de ma tête et glisser dans le col de ma chemise. Je cambrai le dos quand la neige descendit sur mes vertèbres et me retournai lentement. Cachée derrière un arbre, Reby tenait dans sa main gantée une boule de neige qu'elle lança sur Lorian et une autre sur son mari.
+                    <br>
+                    Lorian fit le même mouvement que moi, à la différence qu'il souriait. Dans sa main se matérialisa une boule de neige bien plus grosse que celle de Reby et il la jeta. Il manipulait les éléments et avait le pouvoir d'invocation, magie qu'il tenait de sa mère.
+                    <br>
+                    Il était leur portrait craché, aussi bien sur son intelligence que sur son physique. Il était grand pour un adolescent de seize ans, avait les cheveux noirs parcourus de mèches bleu cuivré, avec des yeux rouges et des pommettes hautes. Comme son père, il s'était fait percer les oreilles, deux fois, et arborait des anneaux qui renforçaient sa filiation.
+                    <br>
+                    Suite à cette déclaration de guerre, une bataille de boules de neige démarra dans la famille, et je me mis en retrait. J'aimais les voir s'amuser et sourire tous les trois, mais je savais pertinemment que je gâchais l'ambiance. J'avais perdu mon sourire il y avait longtemps, même s'il m'arrivait de le retrouver.
+                    <br>
+                    La magie en moi s'agita, galvanisée par la frénésie joyeuse autour de moi. Je sentis qu'elle ne voulait qu'une chose : jaillir pour s'amuser à son tour et faire valoir sa puissance. Lentement, je laissais de nombreux filets de magie dorée s'échapper de ma main. Ils s'enroulèrent autour des flocons qui tombaient et se répandirent sur le sol enneigé. C'était comme si de l'or liquide s'écoulait de ma main, le même que celui de mes cheveux.
+                    <br>
+                    Cela m'émerveilla. L'or forma des cercles et lentement, il forma des boules. Comme si elle avait une conscience propre et qu'elle voulait que je m'amuse, pour une fois. Atteint par cette pensée, je pris la boule froide, la température remontant dans mon bras. Des paillettes d'or résidaient dans la neige, et ma main émit une lumière dorée. La boule s'éleva seule dans les airs, à la seule force de ma magie, et fusa vers Lorian, qui se retourna.
+                    <br>
+                    Son expression passa du choc à la joie en voyant la rivière de pouvoir à mes pieds et la neige pailletée sur sa joue. Il n'hésita pas, et d'un signe discret que je remarquai, il enjoignit ses parents de m'attaquer. Une pluie de neige s'abattit sur moi, et consciemment, je levai une barrière de magie devant moi, sur laquelle les boules tombèrent.
+                    <br>
+                    Les attaques produisaient un bruit sourd, semblable au bruit d'un coup sur du béton. Les projectiles arrêtaient brutalement de pleuvoir tandis que les Redfox s'approchaient. Gajeel posa sa main sur la paroi et déclara :
+                    <br>
+                    — Tu es mauvais joueur, Nash.
+                    <br>
+                    En effet, je l'étais.
+                    <br>
+                    — Je suis un chasseur de Dragon, dis-je comme une raison valable.
+                    <br>
+                    — Et sûrement plus que ça, déclara Polyussica qui s'approchait, couverte d'une cape rembourrée. Je l'ai sentie, Nash. Cette puissance en toi, elle n'est pas unique. Il reste des mystères dans ce que j'ai senti en toi, ce matin.
+                    <br>
+                    — Voilà qui explique ce déchaînement, dis-je avec circonspection. Ce n'est pas normal, n'est-ce pas ?
+                    <br>
+                    — En effet. Tu n'es pas censé être doté d'autant de pouvoir. C'est un problème, mais nous le résoudrons.
+                    <br>
+                    Je hochai la tête, m'enfermant de nouveau dans le silence, songeur. J'avais appris à me contrôler. À tout contrôler. Mes émotions, mon corps, ma magie. Je n'avais pas le droit à l'erreur, là où j'habitais. J'étais le frère d'une prodige de la magie, mais j'étais moi-même un prodige, que mes géniteurs le remarquent ou non.
+                    <br>
+                    Seulement voilà : je savais me battre, je savais manier les armes, je savais tuer, je savais me servir de la magie. Je voulais faire plus. Bien plus. Je voulais partir en mission, gagner de l'argent, me tester. J'avais envie de violence, de batailles. Mon cœur s'accéléra, et je me levai. D'un regard, j'invitai Gajeel à se battre.
+                    <br>
+                    Il se mit en position, et nous nous jetâmes l'un sur l'autre. La douleur de mes muscles irradia et je m'en délectais. Je me battis à fond, la magie battant furieusement en moi. Cela faisait beaucoup à digérer, et me battre était le seul moyen que j'avais pour relâcher la pression.
+                    <br>
+                    Quand il me battit, je demeurais là, couché sur le sol neigeux, le regard perdu dans le ciel grisonnant. Que fallait-il que je fasse ? Depuis que j'avais commencé à prendre la potion, je quittais ma chambre chez les Heartfilia-Dragnir pour passer la nuit chez Polyussica. J'étais si invisible aux yeux de mes géniteurs que j'avais l'impression de ne pas exister dans leurs vies.
+                    <br>
+                    Cela me convenait, je ne les considérais pas comme ma famille. Mes proches étaient les Redfox, et seulement eux. Gajeel et Reby m'avaient élevé comme leur fils, et je considérais Lorian comme mon frère. Pour moi, ils étaient ma famille, et il m’arrivait d’appeler les adultes « papa et maman ».
+                    <br>
+                    — Ne t'avais-je pas dit plus tôt de te reposer ? fit Polyussica d'un ton accusateur.
+                    <br>
+                    — Il fallait que je sorte. Rester enfermé toute la journée… ce n'était pas moi. Je me sentais étouffer.
+                    <br>
+                    — Je comprends. Que comptes-tu faire désormais ?
+                    <br>
+                    — Retourner dormir chez Natsu et Lucy. Si je veux devenir plus fort, je vais devoir approcher mes ennemis, et tester mes limites.
+                    <br>
+                    Je vivais dans un équilibre fragile. Et j'étais prêt à le briser pour atteindre mon objectif.
                 </p>
+                <br>
+                <br>
+                <nav class="chap_nav">
+                    <a href="#Prologue" onclick="showSection('prologue')">Prologue</a>
+                    <a href="#chapitre_2" onclick="showSection('chapitre2')">➡️ Chapitre 2</a>
+                </nav>
+            </section>
         </main>
 
         <!-- Footer -->
